@@ -3,20 +3,33 @@
 ```
 magnet:?xt=urn:btih:920c1a578e815e9d0e4b843179306cdcb5e8e00d&dn=idapro90rc1
 ```
-mac使用方法：
+* 9.1版本
 ```
-cd kg_patch
-cp -f keygen2.py /Applications/IDA\ Professional\ 9.0.app/Contents/MacOS
-cd /Applications/IDA\ Professional\ 9.0.app/Contents/MacOS
-python keygen2.py
-mv -f libida.dylib.patched libida.dylib
-mv -f libida32.dylib.patched libida32.dylib
-sudo codesign -f -s - /Applications/IDA\ Professional\ 9.0.app/Contents/MacOS/libida.dylib
-sudo codesign -f -s - /Applications/IDA\ Professional\ 9.0.app/Contents/MacOS/libida32.dylib
-sudo xattr -cr /Applications/IDA\ Professional\ 9.0.app
+magnet:?xt=urn:btih:f24cfadb8a66b343bf1ff4f0c1386a5f6991c818&dn=ida91
 ```
 
-开启idapython
+mac使用方法：
+```
+请确认你的ida pro version
+IDA_PATH=/Applications/IDA\ Professional\ 9.1.app/
+
+cd kg_patch
+cp -f ${IDA_PATH}Contents/MacOS/libida.dylib ./
+cp -f ${IDA_PATH}Contents/MacOS/libida32.dylib ./
+
+9.0:
+python keygen2.py
+9.1:
+python keygen3.py
+
+mv -f libida.dylib.patched ${IDA_PATH}Contents/MacOS/libida.dylib
+mv -f libida32.dylib.patched ${IDA_PATH}Contents/MacOS/libida32.dylib
+sudo codesign -f -s - ${IDA_PATH}Contents/MacOS/libida.dylib
+sudo codesign -f -s - ${IDA_PATH}Contents/MacOS/libida32.dylib
+//sudo xattr -cr ${IDA_PATH}
+```
+
+在9.0中开启idapython，可能会用到（9.1已经可以自动识别了）
 ```
 cd /Applications/IDA\ Professional\ 9.0.app/Contents/MacOS
 ./idapyswitch
