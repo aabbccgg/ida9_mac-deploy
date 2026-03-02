@@ -1,11 +1,15 @@
-* 构建版本2024-0925 
 * 原生支持linux mac win
+* 9.3版本
 ```
-magnet:?xt=urn:btih:920c1a578e815e9d0e4b843179306cdcb5e8e00d&dn=idapro90rc1
+magnet:?xt=urn:btih:4520c7a7369ef43b7da462cabb85c44c23493158&dn=ida93&xl=4467442676
 ```
 * 9.1版本
 ```
 magnet:?xt=urn:btih:f24cfadb8a66b343bf1ff4f0c1386a5f6991c818&dn=ida91
+```
+* 构建版本2024-0925 
+```
+magnet:?xt=urn:btih:920c1a578e815e9d0e4b843179306cdcb5e8e00d&dn=idapro90rc1
 ```
 
 mac使用方法：
@@ -17,10 +21,12 @@ cd kg_patch
 cp -f ${IDA_PATH}Contents/MacOS/libida.dylib ./
 cp -f ${IDA_PATH}Contents/MacOS/libida32.dylib ./
 
-9.0:
-python keygen2.py
+9.3:
+node keygen3.js
 9.1:
 python keygen3.py
+9.0:
+python keygen2.py
 
 mv -f libida.dylib.patched ${IDA_PATH}Contents/MacOS/libida.dylib
 mv -f libida32.dylib.patched ${IDA_PATH}Contents/MacOS/libida32.dylib
