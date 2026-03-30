@@ -1,4 +1,9 @@
 * 原生支持linux mac win
+
+* 9.3-sp1版本
+```
+magnet:?xt=urn:btih:32c56c8bd735b457ad7d620a6b9d554b1438f9ae&dn=ida93sp1&xl=4459641133
+```
 * 9.3版本
 ```
 magnet:?xt=urn:btih:4520c7a7369ef43b7da462cabb85c44c23493158&dn=ida93&xl=4467442676
