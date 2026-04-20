@@ -42,16 +42,16 @@ sudo codesign -f -s - ${IDA_PATH}Contents/MacOS/libida32.dylib
 
 在9.0中开启idapython，可能会用到（9.1已经可以自动识别了）
 ```
-cd /Applications/IDA\ Professional\ 9.0.app/Contents/MacOS
+${IDA_PATH}Contents/MacOS
 ./idapyswitch
 
-# 选择你的venv使用的python
+# 选择你的系统目录的python
 ```
 
 设置idapython venv
 ```
-# 修改idapythonrc.py文件中mypath为你venv的路径
-cp idapythonrc.py /User/name/.idapro
+# 使用 --force-path 来手动指定venv路径
+${IDA_PATH}Contents/MacOS/idapyswitch --force-path
 ```
 
 完整ida feeds支持#目前会导致PyQt5无法被引用，从而加载失败
