@@ -58,4 +58,9 @@ https://community.hex-rays.com/t/using-a-virtualenv-for-idapython/261
 · 创建 `idapythonrc.py`，参考`https://github.com/eset/ipyida/blob/master/README.virtualenv.adoc`
 · 进入目录 `cd ~/.idapro/python_env/bin`
 · 创建 `activate_this.py` 参考`https://github.com/pypa/virtualenv/blob/main/src/virtualenv/activation/python/activate_this.py`
+· 修改 `activate_this.py`:
+    __BIN_NAME__ → "bin"
+    __VIRTUAL_PROMPT__ → "python_env"
+    __LIB_FOLDERS__ → "../lib/python3.13/site-packages"
+    __DECODE_PATH__ → False
 ```
