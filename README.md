@@ -50,14 +50,6 @@ ${IDA_PATH}Contents/MacOS
 
 设置idapython venv
 ```
-# 使用 --force-path 来手动指定venv路径
-${IDA_PATH}Contents/MacOS/idapyswitch --force-path <your-venv-path>
-```
-
-完整ida feeds支持#目前会导致PyQt5无法被引用，从而加载失败
-```
-cd /Applications/IDA\ Professional\ 9.0.app/Contents/MacOS/plugins/ida_feeds
-pip install -r requirements.txt
-`mkdir $HOME/.idapro/plugins`
-`ln -s "$(pwd)" $HOME/.idapro/plugins/`
+# 请参考这个
+https://community.hex-rays.com/t/using-a-virtualenv-for-idapython/261
 ```
