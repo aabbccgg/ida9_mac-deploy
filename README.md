@@ -51,7 +51,7 @@ ${IDA_PATH}Contents/MacOS
 设置idapython venv
 ```
 # 使用 --force-path 来手动指定venv路径
-${IDA_PATH}Contents/MacOS/idapyswitch --force-path
+${IDA_PATH}Contents/MacOS/idapyswitch --force-path <your-venv-path>
 ```
 
 完整ida feeds支持#目前会导致PyQt5无法被引用，从而加载失败
