@@ -52,4 +52,9 @@ ${IDA_PATH}Contents/MacOS
 ```
 # 请参考这个
 https://community.hex-rays.com/t/using-a-virtualenv-for-idapython/261
+## 具体操作
+· 进入目录 `cd ~/.idapro`
+· 创建 `python_env` 
+· 创建 `idapythonrc.py`，参考`https://github.com/eset/ipyida/blob/master/README.virtualenv.adoc`
+· 创建 `activate_this.py` 参考`https://github.com/pypa/virtualenv/blob/main/src/virtualenv/activation/python/activate_this.py`
 ```
